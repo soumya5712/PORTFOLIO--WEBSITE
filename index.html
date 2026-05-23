@@ -1,0 +1,531 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Soumya Ranjan Barik | Frontend Developer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ============ LOADING SCREEN ============ -->
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">SRB</div>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+      <p class="loader-text">Initializing portfolio...</p>
+    </div>
+  </div>
+
+  <!-- ============ CUSTOM CURSOR ============ -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ============ SCROLL PROGRESS BAR ============ -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>SRB<span class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============ HERO SECTION ============ -->
+  <section id="home" class="hero">
+    <canvas id="particleCanvas"></canvas>
+    <div class="hero-glow glow-1"></div>
+    <div class="hero-glow glow-2"></div>
+    <div class="hero-glow glow-3"></div>
+
+    <div class="hero-content">
+      <div class="hero-tag reveal-up">
+        <span class="tag-dot"></span> Available for opportunities
+      </div>
+      <h1 class="hero-name reveal-up">
+        Soumya Ranjan<br /><span class="name-accent">Barik</span>
+      </h1>
+      <div class="hero-role reveal-up">
+        <span class="role-prefix">I am a </span>
+        <span class="typed-text" id="typedText"></span>
+        <span class="cursor-blink">|</span>
+      </div>
+      <p class="hero-bio reveal-up">
+        Crafting pixel-perfect, performant web experiences with a passion for
+        clean code and thoughtful UI. Based in Gurugram, India.
+      </p>
+      <div class="hero-buttons reveal-up">
+        <a href="#projects" class="btn-primary">
+          <span>View Projects</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="#contact" class="btn-outline">
+          <span>Contact Me</span>
+        </a>
+      </div>
+      <div class="hero-socials reveal-up">
+        <a href="mailto:soumyabarik077@gmail.com" class="social-link" title="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://github.com/" target="_blank" class="social-link" title="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/" target="_blank" class="social-link" title="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://twitter.com/" target="_blank" class="social-link" title="Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="profile-frame">
+        <div class="profile-ring ring-1"></div>
+        <div class="profile-ring ring-2"></div>
+        <div class="profile-ring ring-3"></div>
+        <div class="profile-avatar">
+          <div class="avatar-initials">SRB</div>
+          <div class="avatar-code">
+            <span>&lt;dev /&gt;</span>
+          </div>
+        </div>
+        <div class="floating-badge badge-1"><i class="fab fa-react"></i> React</div>
+        <div class="floating-badge badge-2"><i class="fab fa-js"></i> JS</div>
+        <div class="floating-badge badge-3"><i class="fab fa-css3-alt"></i> CSS3</div>
+        <div class="floating-badge badge-4"><i class="fab fa-html5"></i> HTML5</div>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-indicator">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Scroll Down</span>
+    </a>
+  </section>
+
+  <!-- ============ ABOUT SECTION ============ -->
+  <section id="about" class="section about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">01 — About</span>
+        <h2 class="section-title">Who I Am</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-card glass-card reveal-left">
+          <div class="about-img-wrap">
+            <div class="about-avatar">
+              <span>SRB</span>
+            </div>
+            <div class="about-img-glow"></div>
+          </div>
+        </div>
+        <div class="about-text reveal-right">
+          <h3>Frontend Developer & <span class="accent">UI Enthusiast</span></h3>
+          <p>
+            I'm Soumya Ranjan Barik, a final-year B.Tech Computer Science student at
+            GD Goenka University, Gurugram. I'm deeply passionate about building
+            interfaces that not only look beautiful but feel intuitive and fast.
+          </p>
+          <p>
+            My journey in web development is driven by a love for transforming ideas
+            into polished, user-centric digital experiences. I specialize in modern
+            frontend stacks — HTML5, CSS3, JavaScript, React.js, and Tailwind CSS —
+            with a sharp eye for detail, responsiveness, and performance.
+          </p>
+          <p>
+            When I'm not coding, I'm exploring UI/UX trends, contributing to projects,
+            and continuously leveling up my skills to stay ahead of the curve.
+          </p>
+          <div class="about-stats">
+            <div class="stat-item">
+              <span class="stat-num" data-target="2">0</span>+
+              <span class="stat-label">Projects Built</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num" data-target="1">0</span>+
+              <span class="stat-label">Internship</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num" data-target="10">0</span>+
+              <span class="stat-label">Tech Skills</span>
+            </div>
+          </div>
+          <div class="about-actions">
+            <a href="mailto:soumyabarik077@gmail.com" class="btn-primary">
+              <span>Hire Me</span> <i class="fas fa-paper-plane"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS SECTION ============ -->
+  <section id="skills" class="section skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">02 — Skills</span>
+        <h2 class="section-title">Technical Arsenal</h2>
+      </div>
+      <div class="skills-grid">
+
+        <!-- Languages -->
+        <div class="skill-category glass-card reveal-up">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon"><i class="fas fa-code"></i></div>
+            <h3>Languages</h3>
+          </div>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-meta"><span>JavaScript</span><span>90%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-w="90"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-meta"><span>SQL</span><span>75%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-w="75"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-meta"><span>C++</span><span>70%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-w="70"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Frontend -->
+        <div class="skill-category glass-card reveal-up" style="--delay:0.1s">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon"><i class="fas fa-layer-group"></i></div>
+            <h3>Frontend</h3>
+          </div>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-meta"><span>HTML5</span><span>95%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-w="95"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-meta"><span>CSS3</span><span>92%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-w="92"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-meta"><span>Tailwind CSS</span><span>85%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-w="85"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-meta"><span>Responsive Design</span><span>90%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-w="90"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Frameworks -->
+        <div class="skill-category glass-card reveal-up" style="--delay:0.2s">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon"><i class="fab fa-react"></i></div>
+            <h3>Frameworks</h3>
+          </div>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-meta"><span>React.js</span><span>80%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-w="80"></div></div>
+            </div>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Component Architecture</span>
+            <span class="skill-tag">State Management</span>
+            <span class="skill-tag">API Integration</span>
+            <span class="skill-tag">UI/UX Design</span>
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="skill-category glass-card reveal-up" style="--delay:0.3s">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon"><i class="fas fa-tools"></i></div>
+            <h3>Tools & Platforms</h3>
+          </div>
+          <div class="tools-grid">
+            <div class="tool-item"><i class="fab fa-git-alt"></i><span>Git</span></div>
+            <div class="tool-item"><i class="fab fa-github"></i><span>GitHub</span></div>
+            <div class="tool-item"><i class="fas fa-code"></i><span>VS Code</span></div>
+            <div class="tool-item"><i class="fas fa-cloud-upload-alt"></i><span>Vercel</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE SECTION ============ -->
+  <section id="experience" class="section experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">03 — Experience</span>
+        <h2 class="section-title">Work Experience</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-line"></div>
+        <div class="timeline-item reveal-left">
+          <div class="timeline-dot">
+            <i class="fas fa-briefcase"></i>
+          </div>
+          <div class="timeline-card glass-card">
+            <div class="exp-header">
+              <div>
+                <h3 class="exp-role">Frontend Developer Intern</h3>
+                <span class="exp-company">Skillcraft Technology</span>
+              </div>
+              <span class="exp-period">July 2025 – Aug 2025</span>
+            </div>
+            <ul class="exp-duties">
+              <li>Developed responsive web interfaces using HTML, CSS, and JavaScript</li>
+              <li>Improved UI responsiveness for mobile and desktop devices</li>
+              <li>Worked with Git and GitHub for version control and collaboration</li>
+              <li>Assisted in frontend debugging and UI enhancements</li>
+            </ul>
+            <div class="exp-tags">
+              <span class="exp-tag">HTML</span>
+              <span class="exp-tag">CSS</span>
+              <span class="exp-tag">JavaScript</span>
+              <span class="exp-tag">Git</span>
+              <span class="exp-tag">GitHub</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS SECTION ============ -->
+  <section id="projects" class="section projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">04 — Projects</span>
+        <h2 class="section-title">Featured Work</h2>
+      </div>
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <div class="project-card glass-card reveal-up">
+          <div class="project-img">
+            <div class="project-img-inner">
+              <i class="fas fa-link"></i>
+              <span>Blockchain Verification</span>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="project-btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+              <a href="#" class="project-btn project-btn-outline"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-number">01</div>
+            <h3 class="project-title">Blockchain Certificate Verification System</h3>
+            <p class="project-desc">
+              Designed a certificate authentication workflow with QR-based verification,
+              responsive layouts, and interactive UI cards for seamless verification
+              status handling across all devices.
+            </p>
+            <div class="project-tech">
+              <span>HTML</span>
+              <span>Tailwind CSS</span>
+              <span>JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card glass-card reveal-up" style="--delay:0.15s">
+          <div class="project-img project-img-2">
+            <div class="project-img-inner">
+              <i class="fas fa-map-marked-alt"></i>
+              <span>Tourism Platform</span>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="project-btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+              <a href="#" class="project-btn project-btn-outline"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-number">02</div>
+            <h3 class="project-title">Tourism Recommendation System</h3>
+            <p class="project-desc">
+              Developed a responsive tourism recommendation platform with category-based
+              destination filtering, interactive frontend, and clean navigation flow
+              optimized for multiple screen sizes.
+            </p>
+            <div class="project-tech">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EDUCATION SECTION ============ -->
+  <section id="education" class="section education">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">05 — Education</span>
+        <h2 class="section-title">Academic Journey</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-line"></div>
+
+        <div class="timeline-item reveal-right">
+          <div class="timeline-dot timeline-dot-edu">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <div class="timeline-card glass-card">
+            <div class="edu-header">
+              <div class="edu-icon"><i class="fas fa-university"></i></div>
+              <div>
+                <h3>GD Goenka University</h3>
+                <span class="edu-loc"><i class="fas fa-map-marker-alt"></i> Gurugram, Haryana</span>
+              </div>
+              <span class="exp-period">2022 – 2026</span>
+            </div>
+            <p class="edu-degree">Bachelor of Technology in Computer Science</p>
+            <p class="edu-desc">
+              Studying core CS fundamentals alongside modern web development,
+              data structures, algorithms, and software engineering principles.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-right" style="--delay:0.2s">
+          <div class="timeline-dot timeline-dot-edu">
+            <i class="fas fa-school"></i>
+          </div>
+          <div class="timeline-card glass-card">
+            <div class="edu-header">
+              <div class="edu-icon"><i class="fas fa-book"></i></div>
+              <div>
+                <h3>Biju Pattnaik College of Science & Education</h3>
+                <span class="edu-loc"><i class="fas fa-map-marker-alt"></i> Bhubaneswar, Odisha</span>
+              </div>
+              <span class="exp-period">2020 – 2022</span>
+            </div>
+            <p class="edu-degree">Senior Secondary — Science Stream</p>
+            <p class="edu-desc">
+              Completed higher secondary education with a focus on Physics,
+              Chemistry, Mathematics, and Computer Science.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT SECTION ============ -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">06 — Contact</span>
+        <h2 class="section-title">Let's Connect</h2>
+        <p class="section-subtitle">Have a project in mind or just want to say hello? I'd love to hear from you.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal-left">
+          <div class="contact-card glass-card">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <span class="contact-label">Email</span>
+              <a href="mailto:soumyabarik077@gmail.com" class="contact-val">soumyabarik077@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-card glass-card">
+            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+            <div>
+              <span class="contact-label">Phone</span>
+              <a href="tel:+918260634956" class="contact-val">+91 8260634956</a>
+            </div>
+          </div>
+          <div class="contact-card glass-card">
+            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <span class="contact-label">Location</span>
+              <span class="contact-val">Gurugram, Haryana, India</span>
+            </div>
+          </div>
+          <div class="contact-socials">
+            <a href="mailto:soumyabarik077@gmail.com" class="social-link" title="Email"><i class="fas fa-envelope"></i></a>
+            <a href="https://github.com/" target="_blank" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/" target="_blank" class="social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://twitter.com/" target="_blank" class="social-link" title="Twitter"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+
+        <form class="contact-form glass-card reveal-right" id="contactForm">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" placeholder="John Doe" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="john@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary form-submit">
+            <span>Send Message</span>
+            <i class="fas fa-paper-plane"></i>
+          </button>
+          <div class="form-success" id="formSuccess">
+            <i class="fas fa-check-circle"></i> Message sent successfully!
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <span class="logo-bracket">&lt;</span>SRB<span class="logo-bracket">/&gt;</span>
+      </div>
+      <p class="footer-copy">
+        &copy; 2025 Soumya Ranjan Barik. Crafted with <span class="heart">♥</span> and lots of ☕
+      </p>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <a href="#home" class="back-to-top" id="backToTop" title="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
